@@ -1,0 +1,14 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --preto: #000;
+  --branco: #fff;
+  --cinza: #e2e2e2;
+}
+
+body {
+  background-color: var(--branco);
+}
