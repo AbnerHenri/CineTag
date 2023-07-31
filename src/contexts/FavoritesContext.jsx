@@ -14,21 +14,23 @@ export default function FavoritesProvider({ children }) {
   );
 }
 
-export default function useFavoriteContext() {
-  const { favorite, setFavorite } = useContext(FavoriteContext)
+export function useFavoriteContext() {
+  const { favorite, setFavorite } = useContext(FavoriteContext);
 
   function addFavorite(newFavorite) {
-    const repeatFavorite = favorite.some(item => item.id === newFavorite.id)
-    let newList = [...favorite]
+    const repeatFavorite = favorite.some((item) => item.id === newFavorite.id);
+    debugger;
+    let newList = [...favorite];
 
-    if(!repeatFavorite) {
-      newList.push(newFavorite)
-      return setFavorite(newList)
+    if (!repeatFavorite) {
+      newList.push(newFavorite);
+      return setFavorite(newList);
     }
 
-    newList.splice(newList.indexOf(newFavorite), 1)
-    return setFavorite(newList)
+    newList.splice(newList.indexOf(newFavorite), 1);
+    debugger;
+    return setFavorite(newList);
   }
 
-  return { favorite, addFavorite }
+  return { favorite, addFavorite };
 }

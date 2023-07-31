@@ -1,34 +1,32 @@
-.container {
+.container-card {
   padding: 0 0 1em 0;
   margin: 1.6em 1em;
-  width: 282px;
+  width: 222px;
+  height: 70%;
   background-color: var(--cinza);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.capa {
-  height: 350px;
-}
-
-.capa img {
+.capa-card img {
   width: 100%;
 }
 
-.title {
+.title-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.container h4,
-.favoritar {
+.container-card h4,
+.favoritar-card {
   padding: 0 0.8em;
 }
 
-.favoritar {
+.favoritar-card {
   width: 20px;
   align-self: flex-end;
+  cursor: pointer;
 }

@@ -1,24 +1,40 @@
 import "./Favorites.css";
-import { useContext } from "react";
 
 import { Banner } from "../../components/Banner/Banner";
 import { Title } from "../../components/Title/Title";
+import { Card } from "../../components/Card/Card";
 
-// import { Card } from "../../components/Card/Card";
-
+import { useFavoriteContext } from "../../contexts/FavoritesContext";
 export const Favorites = () => {
+  const { favorite } = useFavoriteContext();
+
   return (
     <div>
       <Banner image={"favoritos"} />
       <Title>
-        <h1>Aqui estão os seus favoritos</h1>
+        {favorite.length > 0 ? (
+          <h1>Aqui estão os seus favoritos</h1>
+        ) : (
+          <h1>Você não possui favoritos</h1>
+        )}
       </Title>
 
       <section className="container-home">
-        {/* {favorite.map((e) => {
-          return <h2>{e}</h2>;
-        })} */}
+        {favorite.length > 0 ? (
+          favorite.map((e) => {
+            return (
+              <Card key={e.id} id={e.id} title={e.title} cover={e.cover} />
+            );
+          })
+        ) : (
+          <img
+            src={"/assets/notfav.png"}
+            alt="Sem favoritos"
+            className="not-favorites"
+          />
+        )}
       </section>
+      <br></br>
     </div>
   );
 };
