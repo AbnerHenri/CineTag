@@ -20,7 +20,7 @@ function App() {
 
       <section className="container-home">
         {videosData.map((e) => {
-          return <Card id={e.id} title={e.titulo} cover={e.capa} />;
+          return <Card key={e.id} id={e.id} title={e.titulo} cover={e.capa} />;
         })}
       </section>
 
