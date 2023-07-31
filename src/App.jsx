@@ -1,5 +1,6 @@
 import "./App.css";
 
+import videosData from "./json/db.json";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Header } from "./components/Header/Header";
@@ -17,11 +18,11 @@ function App() {
         <h1>Um lugar para guardar seus vídeos e filmes!</h1>
       </Title>
 
-      <Card
-        id={"1"}
-        title={"Gato bonifácio"}
-        cover={"https://thecatapi.com/api/images/get?format-src&type=png"}
-      />
+      <section className="container-home">
+        {videosData.map((e) => {
+          return <Card id={e.id} title={e.titulo} cover={e.capa} />;
+        })}
+      </section>
 
       <Routes>
         {/* <Route path="/" element="" /> */}

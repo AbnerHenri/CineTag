@@ -1,7 +1,7 @@
 .container {
   padding: 0 0 1em 0;
-  margin-top: 0.5em;
-  width: 202px;
+  margin-top: 1em;
+  width: 230px;
   background-color: var(--cinza);
   display: flex;
   flex-direction: column;
@@ -9,14 +9,26 @@
 }
 
 .capa {
+  height: 340px;
+}
+
+.capa img {
   width: 100%;
 }
 
-.container h2,
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container h3,
 .favoritar {
-  padding: 0 1em;
+  padding: 0 0.8em;
+  max-width: 80%;
 }
 
 .favoritar {
-  width: 25px;
+  width: 20px;
 }
