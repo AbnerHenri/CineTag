@@ -6,12 +6,17 @@ import { Banner } from "../../components/Banner/Banner";
 import { Title } from "../../components/Title/Title";
 
 import { useNavigate, useParams } from "react-router-dom";
+import { NotFound } from "../NotFound/NotFound";
 
 export const Player = () => {
   const params = useParams();
   const videos = videosData.find((video) => {
     return video.id == Number(params.id);
   });
+
+  if (!videos) {
+    return <NotFound />;
+  }
 
   const navigate = useNavigate();
 
