@@ -5,9 +5,10 @@ import App from "./App";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 
-import { Favorites } from "./pages/Favorites/Favorites";
-
 import FavoritesProvider from "./contexts/FavoritesContext";
+
+import { Player } from "./pages/Player/Player";
+import { Favorites } from "./pages/Favorites/Favorites";
 
 export const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ export const AppRoutes = () => {
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/favoritos" element={<Favorites />} />
+          <Route path="/:id" element={<Player />} />
         </Routes>
       </FavoritesProvider>
       <Footer />

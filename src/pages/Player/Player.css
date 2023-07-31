@@ -1,0 +1,21 @@
+.video {
+  margin: 0.5em 3em 4em 3em;
+}
+
+.goBack {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--branco);
+  font-size: 22px;
+  padding: 10px;
+  margin-left: 50px;
+
+  border: none;
+  border-radius: 1.5em;
+  background-color: var(--preto);
+
+  transform: translateY(-60px);
+  cursor: pointer;
+}

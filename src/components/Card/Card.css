@@ -11,6 +11,7 @@
 
 .capa-card img {
   width: 100%;
+  cursor: pointer;
 }
 
 .title-card {
