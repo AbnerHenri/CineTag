@@ -8,7 +8,7 @@ export const Card = ({ id, title, cover }) => {
       </div>
 
       <div className="title">
-        <h3>{title}</h3>
+        <h4>{title}</h4>
         <img
           src={`/assets/favorite_outline.png`}
           alt="Favoritar"

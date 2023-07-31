@@ -9,10 +9,10 @@ export const Header = () => {
       </Link>
 
       <nav>
-        <Link to={"./home"} className="link">
+        <Link to={"./"} className="link">
           Home
         </Link>
-        <Link to={"./"} className="link">
+        <Link to={"./favoritos"} className="link">
           Favoritos
         </Link>
       </nav>

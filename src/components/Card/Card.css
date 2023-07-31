@@ -9,7 +9,7 @@
 }
 
 .capa {
-  height: 420px;
+  height: 350px;
 }
 
 .capa img {
@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.container h3,
+.container h4,
 .favoritar {
   padding: 0 0.8em;
 }
