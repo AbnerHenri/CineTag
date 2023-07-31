@@ -1,7 +1,6 @@
 import "./App.css";
 
 import videosData from "./json/db.json";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
@@ -11,7 +10,7 @@ import { Card } from "./components/Card/Card";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <Banner image={"home"} />
       <Title>
@@ -24,13 +23,8 @@ function App() {
         })}
       </section>
 
-      <Routes>
-        {/* <Route path="/" element="" /> */}
-        {/* <Route path="" element="" /> */}
-      </Routes>
-
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 
